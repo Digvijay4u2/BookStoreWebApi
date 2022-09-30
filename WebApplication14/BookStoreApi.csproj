@@ -95,6 +95,7 @@
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CoupanController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -102,13 +103,16 @@
     </Compile>
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AddressSqlImpl.cs" />
-    <Compile Include="Models\Book.cs" />
-    <Compile Include="Models\BookSqlImpl.cs" />
+    <Compile Include="Models\Book\Book.cs" />
+    <Compile Include="Models\Book\BookSqlImpl.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategorySqlImpl.cs" />
+    <Compile Include="Models\Coupan.cs" />
+    <Compile Include="Models\CoupanSqlImpl.cs" />
     <Compile Include="Models\IAddressRepository.cs" />
-    <Compile Include="Models\IBookRepository.cs" />
+    <Compile Include="Models\Book\IBookRepository.cs" />
     <Compile Include="Models\ICategoryRepository.cs" />
+    <Compile Include="Models\ICoupanRepository.cs" />
     <Compile Include="Models\IOrderRepository.cs" />
     <Compile Include="Models\IUserRepository.cs" />
     <Compile Include="Models\Order.cs" />
