@@ -19,7 +19,7 @@ namespace WebApplication14.Models.Cart
         }
         public Cart AddCart(Cart cart)
         {
-            comm.CommandText = "insert into cart (BookId,Quantity,Status) values ('" + cart.BookId + "', '" + cart.Quantity + "', '" + cart.Status + "')";
+            comm.CommandText = "insert into cart (UserId,BookId,Quantity,Status) values ('" + cart.UserId + "','" + cart.BookId + "', '" + cart.Quantity + "', '" + cart.Status + "')";
             comm.Connection = conn;
             conn.Open();
             int row = comm.ExecuteNonQuery();
@@ -56,6 +56,7 @@ namespace WebApplication14.Models.Cart
             while (reader.Read())
             {
                 int cid = Convert.ToInt32(reader["CartId"]);
+                int userid = Convert.ToInt32(reader["UserId"]);
                 int bid = Convert.ToInt32(reader["BookId"]);
                 int quant = Convert.ToInt32(reader["Quantity"]);
 
@@ -63,7 +64,7 @@ namespace WebApplication14.Models.Cart
 
 
 
-                list.Add(new Cart(cid, bid,quant,status));
+                list.Add(new Cart(cid,userid, bid,quant,status));
             }
             conn.Close();
             return list;
@@ -71,7 +72,7 @@ namespace WebApplication14.Models.Cart
 
         public string UpdateCart(int id, Cart cart)
         {
-            comm.CommandText = "update Cart set BookId = '" + cart.BookId + "', Quantity = '" + cart.Quantity + "',   Status = '" + cart.Status + "' where CartId = " + id;
+            comm.CommandText = "update Cart set UserId = '" + cart.UserId + "', BookId = '" + cart.BookId + "', Quantity = '" + cart.Quantity + "',   Status = '" + cart.Status + "' where CartId = " + id;
             comm.Connection = conn;
             conn.Open();
             comm.ExecuteNonQuery();
