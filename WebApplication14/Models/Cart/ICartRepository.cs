@@ -9,7 +9,7 @@ namespace WebApplication14.Models.Cart
     {
 
         List<Cart> GetAllCart();
-        Cart AddCoupan(Cart cart);
+        Cart AddCart(Cart cart);
         string DeleteCart(int id);
         string UpdateCart(int id, Cart cart);
     }
