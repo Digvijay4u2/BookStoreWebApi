@@ -107,7 +107,7 @@
     <Compile Include="Models\Book\Book.cs" />
     <Compile Include="Models\Book\BookSqlImpl.cs" />
     <Compile Include="Models\Cart\Cart.cs" />
-    <Compile Include="Models\Cart\CartSqlImlp.cs" />
+    <Compile Include="Models\Cart\CartSqlImpl.cs" />
     <Compile Include="Models\Cart\ICartRepository.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategorySqlImpl.cs" />
